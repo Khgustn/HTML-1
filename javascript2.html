@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> javascript2 </title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <style>
+        *       { padding:0; margin:0; }
+        a       { display:block; height:80px; background:#333; color:#fff; font-size:20px; text-align:center; line-height:80px; }
+        div     { height:300px; background:blue; color:#fff; font-size:50px; text-align:center; line-height:300px; }
+        #btA>div { display:none; }
+    </style>
+</head>
+<body>
+    <div id="btA">
+        <a href="#">버튼1</a>
+        <div>컨텐츠1</div>
+        <a href="#">버튼2</a>
+        <div>컨텐츠2</div>
+        <a href="#">버튼3</a>
+        <div>컨텐츠3</div>
+    </div>
+    <script>
+        var button = document.getElementById('btA').getElementsByTagName('a');
+        for(i = 0; i < button.length; i++){
+            button[i].a = i;
+            button[i].onclick = function(){
+                // for(j=0; j<button.length; j++){
+                //     document.getElementById('btA').getElementsByTagName('div')[j].style.display = 'none';
+                // };
+                /*
+                if(조건 = 1){
+                    조건이 1일 경우.
+                }else if(조건 = 2){
+                    조건이 2일 경우.
+                }else{
+                    조건이 1, 2 가 아닐경우
+                }
+
+                ==  같다
+                != 다르다
+                < 왼쪽이 작다
+                > 왼쪽이 크다
+                <= 왼쪽이 작거나 같다
+                >= 왼쪽이 크거나 같다
+                === 문자와 숫자의 차이도 같다
+                !== 문자와 숫자의 차이도 다르다
+                
+                && and(왼쪽과 오른쪽의 조건이 모두 참 또는 거짓)
+                || or (왼쪽과 오른쪽의 조건 중 하나라도 참 또 거짓)
+                */
+                
+                var clicker = document.getElementById('btA').getElementsByTagName('div')[this.a];
+
+               if(clicker.style.display == 'block'){
+                clicker.style.display = 'none';
+                this.style.background = '#333'
+
+               }else{
+                clicker.style.display = 'block';
+                this.style.background = 'red'
+
+               }
+
+            //    console.log(this.style.background);
+            //    if(this.style.background == 'red'){
+            //    }else{
+            //    }
+
+
+
+                
+            };
+        };
+    </script>
+</body>
+</html>
+

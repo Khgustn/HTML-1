@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">   
+    <title> 계산기 </title>
+    <style>
+        input { border: 0; width: 0; outline: none;
+        background: #eee; float: left; }
+    </style>
+</head>
+<body>
+    <form method="post" action="#" name="myform">
+        <input type="text" name="cal1" value=""/>
+        <input type="text" name="cal2" value=""/>
+        <input type="text" name="cal3" value=""/>
+        <a href="#">계산</a>
+    </form>
+    <p id="txt"></p>
+    <script>
+        var bt = document.myform.getElementsByTagName('a')[0];
+
+            bt.onclick = function(){
+                var cal1 = document.myform.cal.value,
+                    cal2 = document.myform.cal.value,
+                    cal3 = document.myform.cal.value;
+
+                    cal1 = Number(cal1);
+                    cal3 = Number(cal3);
+                if(cal2 == '+'){
+                    console.log(cal1 + cal3);
+                }else if(cal2 == '-'){
+                    console.log(cal1 - cal3);
+                }else if(cal2 == '*'){
+                    console.log(cal1 * cal3);
+                }else if(cal2 == '/'){
+                    console.log(cal1 / cal3);
+                }        
+            };
+    
+    </script>
+</body>
+</html>   

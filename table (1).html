@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table</title>
+        <style>
+            table, th, td {border:1px solid #000;}
+            table { width:800px;}
+        </style>
+    </head>
+    <body>
+        <!--
+            scop > 가로, 세로의 제목을 표시
+            scop="col" > 세로(아래 목록)의 제목
+            scop="row" > 가로(오른쪽 목록)의 제목
+
+            colspan="갯수" > 가로로 합침(갯수 만큼)
+            rowspan="갯수" > 세로로 합침(갯수 만큼)
+
+            table 안에 수서는
+            thead> tfoot>tbody 순으로 하며,
+            thead, tfoot 은 필요시에만 작선.
+            tbody는 필수 (html5 에서는 필수X)
+
+            tr 은 block 태그 처럼 세로
+            th, td는 inline 태그처럼 가로
+
+            테이블은 전체 넓이값에 비례하여 td,th 의
+            갯수만큼 자동으로 간격을 가짐.
+            예)td 가 4개면 각 25%
+            예)td 가 4개이고 3번째만 글자가 길경우
+            3번째만 넓게 나타남.
+
+            단위 > 
+            px - 디스플레이의 가장 작은 단위(픽셀).- 상대 
+            pt - 출판(인쇄)할때의 가장작은 단위.- 절대
+            em - 부모의 100% = 1em(부모를 따라가는 em). 
+            rem - html의 100% = 1rem(html을 따라가는 em). 
+            vw - 화면넓이의 100% = 100vw(내가 보는 화면의 가로비율(모바일)). 
+            vh - 화면의 높이의 100% = 100vh(내가보는 화면의 세로비율(모바일)). 
+            % - 백분율(부모 또는 기준점 기준)
+            colgroup안에 col 넓이값을 지정시, 한개의 col 에만 넓이값을 *을 줄 수 있고, *은 남은 넓이값을 가진다.
+        -->
+         <table>
+             <caption>분야, 분야의 상세, 기간, 검색어를 입력하거나 선택할 수 있는 표</caption>
+            <!-- <colgroup>
+                <col width="22%"/>
+                <col width="*"/>
+                <col width="16%"/>
+                <col width="12%"/>
+                <col width="14%"/>
+            </colgroup>               -->
+            <thead>
+                <tr>
+                    <th scope="row">th1 th1 th1 th1</th>
+                    <th>th2</th>  
+                    <th>th3</th>  
+                    <th>th4</th>  
+                    <th>th5</th>                 
+            
+                </tr>
+            </thead>
+             <tfoot>
+                 <tr>
+                     <th scope="col" >tf1</th>
+                     <td>tf2</td>
+                     <td>tf3</td>
+                     <td>tf4</td>                    
+                     <td>tf5</td>
+                 </tr>
+             </tfoot>
+             <tbody>
+                 <tr>
+                     <th>tb1</th>
+                     <td colspan="2" rowspan="2">tb2</td>
+                     <td rowspan="2">td4</td>                     
+                     <td>tb5</td>
+                 </tr> 
+                 <tr>
+                    <th>tb1</th>                    
+                    <td>tb5</td>
+                </tr> 
+            </tbody>
+        </table>       
+
+                     
+                 
+             
+
+         
+
+    </body>
+</html>

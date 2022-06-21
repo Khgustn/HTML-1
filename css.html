@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <style>
+           div {  } /* 태그 선택 */
+           .a  {  } /* class 선택*/
+           #a  {  } /* id 선택 */
+           div.a  {  } /* 특정 태그의 class 선택 */
+           div div {  } /* div 태그안에 div */
+           div .a {  } /* div 안에 있는 a라는 클래스가 있는 태그*/
+           div + div {  } /*div 태그 다음에 있는 div 태그만(형이있는 남동생찾기) */
+           .b>div /* b라는 클래스 바로 아래 자식태그
+           (자식태그 안에 있는 태그 제외) */
+           .b div:first-child {  } /* 첫번째 자식 */
+           .b div:last-child {  } /* 막내 자식 */
+           .b div:nth-child(3) {  } /* 선택 자식 */
+           html { font-size: 10px; }
+           div { border: 0.1em dashed #ff0000; border-left-width:4px;
+           border-bottom-style:dotted;
+           border-right-color:greenyellow; 
+           font-size:20px; font-weight:300;
+           font-family:'궁서'; font-style:normal; color:blue ; }
+           속성 : 속성값 ;
+           /*
+             선의종류 3가지. 
+             실선 - solid
+             점선 - botted
+             점선(긴) - dashed
+
+
+             border
+             boder-width: 굵기
+             boder-style: 선의 종류
+             boder-color: 색상
+
+             boder-top
+             boder-bottom
+             boder-left
+             boder-right
+           */
+           
+        </style>
+    </head>
+    <body>
+
+
+        <div class="b">
+            <p>1 동해물과 백두산</p>
+            <div>2</div>
+            <div>3</div>
+            <div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+        </div>
+        <div class="a">6</div>
+        <p class="a">7</p>
+        <div id="a">8</div>
+        
+
+
+    </body>
+</html>

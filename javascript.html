@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> javascript </title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <style>
+        *       { padding:0; margin:0; }
+        a       { display:block; height:80px; background:#333; color:#fff; font-size:20px; text-align:center; line-height:80px; }
+        div     { height:300px; background:blue; color:#fff; font-size:50px; text-align:center; line-height:300px; }
+    </style>
+</head>
+<body>
+    
+    <div id="btA">
+        <a href="#" id="bt1">버튼1</a>
+        <a href="#" id="bt2">버튼2</a>
+        <a href="#" id="bt3">버튼3</a>
+    </div>
+    <div id="contA">
+        <div>컨텐츠1</div>
+        <div>컨텐츠2</div>
+        <div>컨텐츠3</div>
+    </div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+    /*
+        //선택자
+        //아이디, 클래스, 태그
+        document.getElementById('bt');
+        document.getElementsByClassName('contents')[1];
+        document.getElementsByTagName('div')[0];
+
+        //변수(전역변수, 지역변수, 매개변수)
+
+        var a = document.getElementById('bt');
+        //변수선언 변수명 = 변수명에 대입할 값.
+
+        //함수
+        function 함수명(매개변수){
+            //실행할 내용
+        }
+
+        //이벤트
+        onclick
+        onmouseover
+        onmouseout
+        onmouseleave
+        onkeydown
+        onkeyup
+        hover
+        focus
+        scroll
+        resize
+    */
+
+
+    //숫자 = 1
+    //문자 = '1'
+
+    // var num = 5,
+    //     num2 = 6,
+    //     num3 = num2,
+    //     num4 = num + num3;
+
+    // alert(num4);
+    // console.log(num);
+    //경고창 > alert()
+    //에러메시지 > console.log()
+    </script>
+
+    <script>
+        var bt = document.getElementById('bt');
+        var cont = document.getElementsByClassName('contents')[0];
+
+        
+        // bt.onmouseover = function(){
+        //     //cont.style.display = 'none';
+        //     hidden();
+        // }
+        // bt.onmouseout = function(){
+        //     //cont.style.display = 'block';
+        //     show();
+        // }
+        function hidden(){
+            cont.style.display = 'none';
+        }
+        function show(){
+            cont.style.display = 'block';
+        }
+
+
+
+        //for문 > 반복문
+        //i > j > k > q > n
+        
+        //var button = document.getElementById('btA').getElementsByTagName('a');
+        
+        var button = document.getElementById('btA').children;
+        for(i = 0; i < button.length; i++){
+            button[i].a =i;
+            /*
+            button[0].a = 0;
+            button[1].a = 1;
+            button[2].a = 2;
+            */
+            button[i].onclick = function(){
+                for(j=0; j<button.length; j++){
+                    document.getElementsById('contA').children[j].style.display = 'none';
+                };
+                // var num = this.id.substring(2);
+                console.log(this);
+                document.getElementsById('contA').children[this.a].style.display = 'block';
+            };
+        };
+
+        // $('#btA a').on('click',function(){
+        //     $('#btA a').css('background','red');
+        //     $(this).css('background','green');
+        //     $('#contA div').hide();
+        //     $('#contA div').eq($(this).index()).show();
+        // });
+
+        //if문
+    </script>
+   
+</body>
+</html>
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <!-- 화면에 나타나지 않고 body를 꾸며주는 속성이
+          들어가는곳. -->
+         <title>제목표시줄(브라우저 탭)에 나타나는 제목. 
+
+         </title>
+     </head>
+    <body>
+            <!--주석-->
+            화면에 <!-- 나타나는 -->  내용.
+         
+          block - 가로값이 기본 100%
+          inline - 글자와 동일.
+
+          --- block (xhtml, html5 공통) ---
+          <div></div>
+          <ul></ul>
+          <li></li>
+          <ol></ol>
+          <dl></dl>
+          <dt></dt>
+          <dd></dd>
+          <p></p>
+
+          -- html5 (전용) --
+          <section></section>
+          <article></article>
+          <nav></nav>
+          <menu></menu>
+          <header></header>
+          <footer></footer>
+
+
+          --- inline (공통) --- 정확히 쓰는 경우 별로 없음
+          <a href="#">링크 - 클릭시 href 내에 주소로 화면 이동</a>
+          <span></span>
+          <strong>굵은 글씨 주요 포인트등 </strong>
+          <em>기울임 글씨</em>
+          <u>밑줄</u>
+          <s>취소선</s>
+          <i>기울임</i>
+          <b>굵은 글씨</b>
+          <address></address>
+          <cite></cite>
+          <img src="이미지 주소" alt="이미지 설명"/>
+          >> img 태그 - 화면에 이미지를 보여주기 위함 -
+          src에 있는 주소의 이미지를 화면에 보여줌 
+          
+
+          --- form (화면에 입력, 선택 등 사용자가 개입할 수 있도록 만드는 부분) ---
+          <form action="#" method="post"></form>
+          <!-- (액션은 전송 메스는 엽서형식이냐 아니냐) -->
+          <fieldset></fieldset>
+          <input type="text" id="userId"/>
+          <label for="userId">아이디</label>
+
+          <label for="phone">휴대폰 번호</label>    
+          <select>
+            <option>010</option>
+            <option>011</option>
+            <option>019</option>
+          </select>
+          <input type="text" title="휴대폰 가운데 4자리"/>
+          <input type="text" title="휴대폰 마지막 4자리"/>
+
+
+
+          <input type="password" title="비밀번호 입력"/>
+          <input type="checkbox" id="terms"/> - 다중 선택
+          <label for="terms">약관에 동의 합니다</label>
+
+          <input type="radio" name="gender" id="men"/>
+          <label for="men">남자</label> - 단일 선택(2개이상)
+          <input type="radio" name="gender" id="women"/>
+          <label for="women">여자</label>
+
+          <input type="file"/> - 컴퓨터에 저장된 파일을 가져옴
+          <input type="tel"/>
+          <textarea>많은 글을 입력 할 때 사용</textarea>
+
+          -- submit (전송 버튼)--
+          <button>전송1</button>
+          <input type="button" value="전송2"/>
+          <input type="submit" value="전송3"/>
+          <input type="image" src="testimg.png"/>
+
+
+          --- table ---
+        <table>
+          <colgroup></colgroup>
+          <thead>
+              <tr>
+                  <th></th>
+              </tr>
+          </thead>
+          <tfoot>
+               <tr>
+                  <th></th>
+                  <td></td>
+               </tr>
+          </tfoot>
+          <tbody>
+                <tr>
+                  <th></th>
+                  <td></td>
+                </tr>            
+          </tbody>
+          
+        </table>
+
+    </body> 
+     
+
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>태그 속성(문법-웹표준)</title>
+    </head>
+    <body>
+        --- block (xhtml, html5 공통) ---
+          div > 모든 태그 가능. 
+           예외 > li, dt, dd, table 안에 들어가는 태그. 
+          ul(순서가 없는 리스트) > li 만 가능.
+          ol(순서가 있는 리스트) > li 만 가능.
+          li > div 와 동일. div 도 가능.
+          dl > dt, dd 만 가능. 단, dt는 한번만 또는 없어도 
+          무방. /dd는 필수. 여러번 가능
+          dt > 인라인 태그만 가능.
+          dd > div와 동일. div 도 가능. 
+          p > dt와 동일. 
+
+
+
+          -- html5 (전용) - div와 동일. div 도 가능.--
+          단, nav, menu, header, footer 는 각각안에 들어갈 수 없다. 
+          <section></section>
+          <article></article>
+          <nav></nav>
+          <menu></menu>
+          <header></header>
+          <footer></footer>
+
+
+          --- inline (공통) - 인라인 태그만 가능 --- (정확히 쓰는 경우 별로 없음)
+          단, a 태그안에 a 태그는 x(html5 이전)
+          html5 d이후 > a 태그 안에 div 와 동일하게 들어감. 
+          <a href="#">링크 - 클릭시 href 내에 주소로 화면 이동</a>
+          <span></span>
+          <strong>굵은 글씨 주요 포인트등 </strong>
+          <em>기울임 글씨</em>
+          <u>밑줄</u>
+          <s>취소선</s>
+          <i>기울임</i>
+          <b>굵은 글씨</b>
+          <address></address>
+          <cite></cite>
+          <img src="이미지 주소" alt="이미지 설명"/>
+          >> img 태그 - 화면에 이미지를 보여주기 위함 -
+          src에 있는 주소의 이미지를 화면에 보여줌 
+          
+          table --
+          th > 인라인 태그만 가능. 
+          td > div 와 동일. 
+
+          form --
+          form, fieldset > div와 동일. 
+          
+    </body>
+</html> 
